@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">カロリー管理アプリ</string>
+    <string-array name="list_taken_calories_when">
+        <item>朝</item>
+        <item>昼</item>
+        <item>夜</item>
+        <item>夜食</item>
+        <item>おやつ</item>
+        <item>その他</item>
+    </string-array>
+    <string-array name="list_taken_calories_num">
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+    </string-array>
+</resources>

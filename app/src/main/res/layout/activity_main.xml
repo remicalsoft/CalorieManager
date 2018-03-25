@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/main_width"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal">
+
+        <!-- 日付 ここから -->
+
+        <LinearLayout
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/main_height"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_prev_data"
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height"
+                android:text="＜"
+                android:textSize="32dp"
+                android:textColor="#888"
+                android:theme="@style/AppTheme.FlatButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
+            <FrameLayout
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height">
+                <Button
+                    android:id="@+id/btn_data"
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:text=""
+                    android:theme="@style/AppTheme.FlatButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    />
+                <LinearLayout
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="2018年 3月"
+                        android:textSize="12dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="22"
+                        android:textSize="32dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="木曜日"
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
+            </FrameLayout>
+            <Button
+                android:id="@+id/btn_next_data"
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height"
+                android:text="＞"
+                android:textSize="32dp"
+                android:textColor="#888"
+                android:padding="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:theme="@style/AppTheme.FlatButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
+        </LinearLayout>
+
+        <!-- 日付 ここまで -->
+
+        <View
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"/>
+
+        <!-- カロリー ここから -->
+
+        <LinearLayout
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/main_height"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height">
+                <Button
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:padding="0dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:theme="@style/AppTheme.FlatButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+                <LinearLayout
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="目標"
+                        android:gravity="center"
+                        android:textSize="@dimen/explanation_font_size"/>
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="1200"
+                        android:gravity="center"
+                        android:textSize="@dimen/main_font_size"/>
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="kcal"
+                        android:gravity="center"
+                        android:textSize="@dimen/end_font_size"/>
+                </LinearLayout>
+            </FrameLayout>
+            <View
+                android:layout_width="@dimen/divider"
+                android:layout_height="match_parent"
+                android:background="@color/divider"/>
+
+            <FrameLayout
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_taken_calories"
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:padding="0dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:theme="@style/AppTheme.FlatButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+                <LinearLayout
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="摂取"
+                        android:gravity="center"
+                        android:textSize="@dimen/explanation_font_size"/>
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:gravity="center"
+                        android:textSize="@dimen/main_font_size"/>
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="kcal"
+                        android:gravity="center"
+                        android:textSize="@dimen/end_font_size"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="@dimen/divider"
+                android:layout_height="match_parent"
+                android:background="@color/divider"/>
+
+            <FrameLayout
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:padding="0dp"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:theme="@style/AppTheme.FlatButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+                <LinearLayout
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="残り"
+                        android:gravity="center"
+                        android:textSize="@dimen/explanation_font_size"/>
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="1200"
+                        android:gravity="center"
+                        android:textSize="@dimen/main_font_size"/>
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="kcal"
+                        android:gravity="center"
+                        android:textSize="@dimen/end_font_size"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- カロリーここまで -->
+
+        <View
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"/>
+
+        <!-- 体重～グラフここから -->
+
+        <LinearLayout
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/main_height"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height">
+                <Button
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:theme="@style/AppTheme.FlatButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+                <LinearLayout
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="体重"
+                        android:gravity="center"
+                        android:textSize="@dimen/explanation_font_size"/>
+                    <FrameLayout
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="56dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-.-"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/main_font_size"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:layout_gravity="right|bottom"
+                            android:text="kg"/>
+                    </FrameLayout>
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="( - %)"
+                        android:gravity="center"
+                        android:textSize="@dimen/end_font_size"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="@dimen/divider"
+                android:layout_height="match_parent"
+                android:background="@color/divider"/>
+
+            <FrameLayout
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height">
+                <Button
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:theme="@style/AppTheme.FlatButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+                <LinearLayout
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="運動量"
+                        android:gravity="center"
+                        android:textSize="@dimen/explanation_font_size"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/main_font_size"/>
+                    <TextView
+                        android:layout_width="@dimen/cell_width"
+                        android:layout_height="wrap_content"
+                        android:text="kcal"
+                        android:gravity="center"
+                        android:textSize="@dimen/end_font_size"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="@dimen/divider"
+                android:layout_height="match_parent"
+                android:background="@color/divider"/>
+
+            <FrameLayout
+                android:layout_width="@dimen/cell_width"
+                android:layout_height="@dimen/main_height">
+                <Button
+                    android:layout_width="@dimen/cell_width"
+                    android:layout_height="@dimen/main_height"
+                    android:theme="@style/AppTheme.FlatButton"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/graph_mini"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_height"
+                    android:layout_margin="4dp" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="@dimen/divider"
+                android:layout_height="match_parent"
+                android:background="@color/divider"/>
+
+        </LinearLayout>
+
+        <!-- 体重～グラフここまで -->
+
+        <View
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"/>
+<!--
+        <TextView
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/main_height"
+            android:gravity="center"
+            android:hint="タップしてメモを入力"/>
+-->
+        <EditText
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/main_height"
+            android:gravity="center"
+            android:hint="タップしてメモを入力"/>
+
+        <View
+            android:layout_width="@dimen/main_width"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"/>
+
+    </LinearLayout>
+<!--
+    <include layout="@layout/drawer_list" android:id="@+id/drawer"/>
+-->
+</android.support.v4.widget.DrawerLayout>

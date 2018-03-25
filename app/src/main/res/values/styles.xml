@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeWhite" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- ToolBarのタイトルテキスト色 -->
+        <item name="android:textColorPrimary">#FFF</item>
+        <!-- ToolBarのオプションメニューのOverflowアイコンの色 -->
+        <item name="android:textColorSecondary">#FFF</item>
+        <item name="windowActionModeOverlay">true</item>
+
+    </style>
+
+
+    <style name="AppTheme.FlatButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">#333</item>
+        <item name="android:textColor">#333</item>
+    </style>
+
+    <style name="AppTheme.RaisedButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">#DDEEFF</item>
+        <item name="colorButtonNormal">#2196F3</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+</resources>
